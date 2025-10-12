@@ -51,7 +51,7 @@ const TodoFrom = () => {
     }
   }
   return (
-    <div className="container mt-5 w-50">
+    <div className="container mt-5 " >
       <h2 className="text-center mb-4" >✅ Todo App</h2>
 
       {/* Input + Button */}
@@ -74,10 +74,10 @@ const TodoFrom = () => {
         {todos.map((item, ind) => <li key={ind}
           className="list-group-item d-flex justify-content-between align-items-center"
         >
-          <span>
+          <span className='fs-6 text-truncate '>
             {item.title}
           </span>
-          <div>
+          <div className='d-flex flex-nowrap'>
             <button onClick={() => handleUpdate(item)} className="btn btn-sm btn-success me-2">
               Update
             </button>
