@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // const apiUrl = 'http://localhost:5000/app/tasks';
-const apiUrl="https://todo-mern-be91.onrender.com/app/tasks"
+const apiUrl="https://todo-mern-be91.onrender.com"
 
 //get all todos
 export const getTodo = async () => {
