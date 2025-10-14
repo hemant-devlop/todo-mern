@@ -5,8 +5,9 @@ const app = express();
 app.use(express.json());
 
 const allowedOrigins = [
+  "https://todo-frontend-8xk8.onrender.com",
   "https://todo-mern-be91.onrender.com",
-  "http://localhost:5173"
+  "http://localhost:5173"                    
 ];
 app.use(cors({
   origin: function (origin, callback) {
