@@ -12,6 +12,7 @@ const TodoFrom = () => {
 
   const fetchTodo = async () => {
     const data = await getTodo();
+    console.log(data)
     setTodos(data)
   }
   const handleTodo = () => {
