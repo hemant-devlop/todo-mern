@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 taskSchema= new mongoose.Schema({
     title:String,
-    date:Date.now(),
+    taskdate: { type: Date, default: Date.now },
     completed:Boolean
 });
 
