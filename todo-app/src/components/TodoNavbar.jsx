@@ -1,54 +1,33 @@
 import React from "react";
 
 const TodoNavbar = () => {
+  const todo=['home','todo','about']
   return (
 
-    <nav className=" navbar navbar-expand-lg navbar-dark bg-primary" style={{cursor:'pointer'}}>
-      <div className="container-fluid">
-        {/* Brand / Logo */}
-        <a className="navbar-brand fw-bold" >
-          📝 Todo App
-        </a>
+    <nav className="bg-[#4044c9]" style={{cursor:'pointer'}}>
+      <div className="flex justify-between px-4 py-3 max-w-300 mx-auto">
+
+        <div className="flex items-center gap-2.5 " >
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M21 0H3C1.35 0 0 1.35 0 3v3.858s3.854 2.24 4.098 2.38c.31.18.694.177 1.004 0c.26-.147 8.02-4.608 8.136-4.675a.77.77 0 0 1 .748-.01c.164.097.606.348.84.48c.232.134.221.502.013.622l-9.712 5.59c-.346.2-.69.204-1.048.002C3.478 10.907.998 9.463 0 8.882v2.02l4.098 2.38c.31.18.694.177 1.004 0c.26-.147 8.02-4.609 8.136-4.676a.77.77 0 0 1 .748-.008c.164.096.606.347.84.48c.232.133.221.5.013.62c-.208.121-9.288 5.346-9.712 5.59c-.346.2-.69.205-1.048.002C3.478 14.951.998 13.506 0 12.926v2.02l4.098 2.38c.31.18.694.177 1.004 0c.26-.147 8.02-4.609 8.136-4.676a.77.77 0 0 1 .748-.009c.164.097.606.348.84.48c.232.133.221.502.013.622l-9.712 5.59c-.346.199-.69.204-1.048.001C3.478 18.994.998 17.55 0 16.97V21c0 1.65 1.35 3 3 3h18c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3"/></svg>
+          </span>
+          <p className="text-lg font-semibold m-0 text-white">TODO ME</p>
+        </div>
 
         {/* Toggler for Mobile */}
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
 
         {/* Navbar Links */}
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" >
-                Tasks
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link"  >
-                Add Todo
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" >
-                About
-              </a>
-            </li>
+        <div className="my-auto" >
+          <ul className="flex m-0 gap-4 text-lg capitalize font-semibold" >
+           {todo.map((item,ind)=><li className="text-white" key={ind}>{item}</li>)}
           </ul>
         </div>
       </div>
+        <button className="hidden">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 17h18M3 12h18M3 7h18"/></svg>
+          </span>
+        </button>
     </nav>
   );
 };

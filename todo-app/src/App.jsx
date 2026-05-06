@@ -7,7 +7,9 @@ const App = () => {
   return (
     <div className='todo'>
       <TodoNavbar/>
-      <TodoFrom/>
+      <div className='max-w-300 mx-auto bg-[#a8a8a8] rounded'>
+        <TodoFrom/> 
+      </div>
     </div>
   )
 }
