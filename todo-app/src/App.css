@@ -1,5 +1,9 @@
 @import "tailwindcss";
 .todo{
   height: 100vh;
+  color:white
+}
 
+.todo-list{
+  color:#4044c9;
 }
